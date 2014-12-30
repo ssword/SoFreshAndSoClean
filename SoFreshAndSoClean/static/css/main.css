@@ -1,0 +1,161 @@
+/*
+
+mamcmanus.com
+© 2014 Matt McManus
+
+*/
+
+/* html5doctor.com/html-5-reset-stylesheet/ */
+/* Why do I use this? read: http://meyerweb.com/eric/tools/css/reset/ */
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,time,mark,audio,video { margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent; } 
+body { line-height:1; }
+ol,ul { list-style:none; }
+blockquote,q { quotes:none; }
+blockquote:before,blockquote:after,q:before,q:after { content:'';content:none; }
+ins { text-decoration:none; }
+del { text-decoration:line-through; }
+table { border-collapse:collapse;border-spacing:0; }
+
+
+/* BASE STYLES */
+
+.page {
+	max-width: 37.5em; /* 800/16 = 37.5 */
+	margin: 0 auto;
+	text-align: center;
+	line-height: 1.5;
+}
+
+/* SITE MASTHEAD + NAV STYLES */
+
+.masthead{
+	padding: 3em;
+}
+
+h1.masthead-name a{
+	text-decoration: none;
+	color: #232a2e;
+	font-size: 1.5em; /* 24/16 = 1.5 */
+}
+
+h1.masthead-name a:hover{
+	color: #168eea;
+}
+
+.masthead-social{
+	padding: 1em;
+}
+
+.masthead-social li{
+	float: left;
+	width: 33.333333333%;
+}
+
+.social-link{
+	text-decoration: none;
+	color: #44525a;
+}
+
+.masthead-social a:hover{
+	color: #168eea;
+}
+
+
+/* Home Page Article List styles */
+
+.article-list-item{
+	padding: 2em;
+}
+
+.article-list li a{
+	text-decoration: none;
+}
+
+.article-list li div{
+	color: #232a2e;
+}
+
+h2.article-list-published-date{
+	text-align: left;
+}
+
+h2.article-list-published-date a{
+	color: #abb4b9;
+}
+
+.article-list-summary{
+	text-align: left;
+	font-size: 1.125em;
+}
+
+.article-list-summary a{
+	color: #232a2e;
+}
+
+h3.article-list-title{
+	text-align: left;
+}
+
+h3.article-list-title a:hover{
+	color: #168eea;
+}
+
+
+
+/* ARTICLE STYLES */
+
+h2.article-published-date{
+	text-align: center;
+	color: #abb4b9;
+}
+
+h3 {
+	text-align: center;
+	font-size: 2em; /* 32/16 = 2 */
+}
+
+h3 a{
+	text-align: center;
+	text-decoration: none;
+	color: #232a2e;
+}
+
+.article-content{
+	display: inline-block;
+	width: 85%; /* results in ~60-70 characters per line */
+	text-align: left;
+	line-height: 1.75;
+}
+
+.article-body{
+	font-size: 1.125em; /* 18/16 = 1.125 */
+}
+
+/* MEDIA QUERIED STYLES */
+
+@media all and (max-width: 37.5em) {
+
+	.article-content{
+		width: 90%;
+	}
+
+	/* MEDIA QUERIED STYLES */
+
+@media all and (max-width: 37.5em) {
+
+	.article-content{
+		width: 90%;
+	}
+
+	.masthead-social li{
+		width: 100%;
+		padding: 1em;
+	}
+
+	.article-list{
+		margin-top: 2em;
+	}
+
+}
+
+}
