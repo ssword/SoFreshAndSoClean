@@ -19,6 +19,11 @@ table { border-collapse:collapse;border-spacing:0; }
 
 /* BASE STYLES */
 
+body {
+	font-family: 'Lato', sans-serif;
+}
+
+
 .page {
 	max-width: 37.5em; /* 800/16 = 37.5 */
 	margin: 0 auto;
@@ -109,17 +114,6 @@ h2.article-published-date{
 	color: #abb4b9;
 }
 
-h3 {
-	text-align: center;
-	font-size: 2em; /* 32/16 = 2 */
-}
-
-h3 a{
-	text-align: center;
-	text-decoration: none;
-	color: #232a2e;
-}
-
 .article-content{
 	display: inline-block;
 	width: 85%; /* results in ~60-70 characters per line */
@@ -127,9 +121,41 @@ h3 a{
 	line-height: 1.75;
 }
 
+.article-content h3 {
+	text-align: center;
+	font-size: 2em; /* 32/16 = 2 */
+}
+
+.article-content h3 a{
+	text-align: center;
+	text-decoration: none;
+	color: #232a2e;
+}
+
 .article-body{
 	font-size: 1.125em; /* 18/16 = 1.125 */
 }
+
+.article-body p{
+	padding-bottom: 2.5em;
+}
+
+.article-body h3{
+	font-size: 1.2em;
+	font-weight: 700;
+	text-align: left;
+	padding-bottom: .5em;
+}
+
+.article-body ul{
+	list-style-type: square;
+	width: 85%;
+	margin: 0 auto;
+	line-height: 2;
+	padding-bottom: 2.5em;
+}
+
+
 
 /* MEDIA QUERIED STYLES */
 

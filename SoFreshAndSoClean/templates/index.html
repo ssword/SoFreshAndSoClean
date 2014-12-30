@@ -3,7 +3,7 @@
 <ol class="article-list">
 {% for article in articles_page.object_list %}
         <li class="article-list-item">
-            <h2 class="article-list-published-date"><a href="{{ SITEURL }}/{{ article.url }}"> {{ article.locale_date }} </a></h2>
+            <h2 class="article-list-published-date"><a href="{{ SITEURL }}/{{ article.url }}"> {{ article.date|datetimefilter }} </a></h2>
             <h3 class="article-list-title"><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h3> 
             <div class="article-list-summary"> <a href="{{ SITEURL }}/{{ article.url }}"> {{ article.summary }} </a></div>
         </li>
