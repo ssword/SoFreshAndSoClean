@@ -31,6 +31,7 @@ body {
 	line-height: 1.5;
 }
 
+
 /* SITE MASTHEAD + NAV STYLES */
 
 .masthead{
@@ -66,6 +67,13 @@ h1.masthead-name a:hover{
 }
 
 
+/* SITE FOOTER STYLES */
+
+footer.page p{
+	color: #abb4b9
+}
+
+
 /* Home Page Article List styles */
 
 .article-list-item{
@@ -74,6 +82,12 @@ h1.masthead-name a:hover{
 
 .article-list li a{
 	text-decoration: none;
+	color: #232a2e;
+}
+
+.article-list h3{
+	text-align: left;
+	font-size: 2em;
 }
 
 .article-list li div{
@@ -97,9 +111,6 @@ h2.article-list-published-date a{
 	color: #232a2e;
 }
 
-h3.article-list-title{
-	text-align: left;
-}
 
 h3.article-list-title a:hover{
 	color: #168eea;
