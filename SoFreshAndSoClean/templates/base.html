@@ -5,32 +5,39 @@
         <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type='text/css' href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" />
-        <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext'>
-        <link rel="stylesheet" type='text/css' href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/{{ CSS_FILE }}" />
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" />
+        <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Lato&amp;subset=latin,latin-ext'>
+        <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/{{ CSS_FILE }}" />
         {% endblock head %}
-
-
 </head>
 
 <body>
-    <div class="page">
-        <div class="masthead">
-            <h1 class="masthead-name"><a href="{{ SITEURL }}/">{{ SITENAME }}</a></h1>
-            <ul class="masthead-social">
-                <li><a class="social-link" href="https://twitter.com/{{ TWITTER_USERNAME }}"><span class="fa fa-twitter"> Twitter </span></a></li>
-                <li><a class="social-link" href="https://instagram.com/{{ INSTAGRAM_USERNAME }}"><span class="fa fa-instagram"> Instagram </span></a></li>
-                <li><a class="social-link" href="{{ GITHUB_URL }}"><span class="fa fa-github-alt"> GitHub </span></a></li>
-            </ul>
+    <div class="page" role="main">
+        <div class="masthead" role="banner">
+            <div class="masthead-header">
+                <header>
+                    <h1 role="heading"><a href="{{ SITEURL }}/" role="link">{{ SITENAME }}</a></h1>
+                </header>
+            </div>
+            <div class="masthead-footer" role="contentinfo">
+                <footer>
+                    <ul>
+                        <li><a href="https://twitter.com/{{ TWITTER_USERNAME }}" role="link"><i class="fa fa-twitter"> Twitter </i></a></li>
+                        <li><a href="https://instagram.com/{{ INSTAGRAM_USERNAME }}" role="link"><i class="fa fa-instagram"> Instagram </i></a></li>
+                        <li><a href="{{ GITHUB_URL }}"><i class="fa fa-github-alt" role="link"> GitHub </i></a></li>
+                    </ul>
+                </footer>
+            </div>
         </div>
         {% block content %}
         {% endblock %}
+        <div class="site-footer" role="contentinfo">
+            <footer>
+                <p>© Copyright 2014 {{ AUTHOR }}</p>
+            </footer>
+        </div>
     </div>
     {% include 'analytics.html' %}
 </body>
-
-<footer class="page">
-  <p>© Copyright 2014 {{ AUTHOR }}</p>
-</footer>
 
 </html>

@@ -1,12 +1,36 @@
 {% extends "base.html" %}
 {% block content %}
-<ol class="article-list">
-{% for article in articles_page.object_list %}
-        <li class="article-list-item">
-            <h2 class="article-list-published-date"><a href="{{ SITEURL }}/{{ article.url }}"> {{ article.date|datetimefilter }} </a></h2>
-            <h3 class="article-list-title"><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h3> 
-            <div class="article-list-summary"> <a href="{{ SITEURL }}/{{ article.url }}"> {{ article.summary }} </a></div>
-        </li>
-{% endfor %}
-</ol><!-- /#posts-list -->
+<div class="article-list">
+    <section>
+        <ol role="list">
+            {% for article in articles_page.object_list %}
+            <li>
+                <div class="article-list-entry" role="article">
+                    <article>
+
+                        <div class="article-list-entry-footer" role="contentinfo">
+                            <footer>
+                                <p><a href="{{ SITEURL }}/{{ article.url }}" role="link"> <time datetime="{{ article.date }}">{{ article.date|datetimefilter }}</time></a></p>
+                            </footer>
+                        </div>
+
+                        <div class="article-list-entry-header" role="heading">
+                            <header>
+                                <h2><a href="{{ SITEURL }}/{{ article.url }}" role="link">{{ article.title }}</a></h2>
+                            </header>
+                        </div>
+
+                        <div class="article-list-entry-summary"> 
+                            <a href="{{ SITEURL }}/{{ article.url }}" role="link"> {{ article.summary }} </a>
+                        </div>
+
+                        <p class="article-list-entry-readmore"><a href="{{ SITEURL }}/{{ article.url }}" role="link"> Read more...</a></p>
+
+                    </article>
+                </div>
+            </li>
+            {% endfor %}
+        </ol>
+    </section>
+</div>
 {% endblock content %}

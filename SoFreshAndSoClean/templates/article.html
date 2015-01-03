@@ -16,23 +16,25 @@
 {% endblock %}
 
 {% block content %}
-  <div class="article-content">
-    <h2 class="article-published-date">
-          <time title="{{ article.date|datetimefilter }}">
-            {{ article.date|datetimefilter }}
-          </time>
-        </h2>
-        <h3>
-        <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark"
-          title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a>
-        </h3>
-        <!--- 
-        {% if TWITTER_USERNAME %}
-          <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="{{TWITTER_USERNAME}}">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
-        {% endif %}
-        //-->
-        <div class="article-body">
+<!-- Begin article. Wrapping HTML5 elements in a div and then styling the div in order to avoid javascript workarounds for older browsers -->
+  <div class="article" role="article">
+    <article>
+      <div class="article-footer" role="contentinfo">
+        <footer>
+            <p class="article-published-date"><time datetime="{{ article.date }}">{{ article.date|datetimefilter }}</time></p>
+        </footer>
+      </div>
+      <div class="article-header" role="heading">
+        <header>
+          <h2>
+            <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}" role="link">{{ article.title }}</a>
+          </h2>
+        </header>
+      </div>
+      <div class="article-body">
          {{ article.content }}
-        </div>
+      </div>
+    </article>
   </div>
+<!-- end article -->
 {% endblock %}

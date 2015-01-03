@@ -5,6 +5,13 @@ mamcmanus.com
 
 */
 
+/* VIEWPORT SETTINGS */
+@-webkit-viewport{width:device-width}
+@-moz-viewport{width:device-width}
+@-ms-viewport{width:device-width}
+@-o-viewport{width:device-width}
+@viewport{width:device-width}
+
 /* html5doctor.com/html-5-reset-stylesheet/ */
 /* Why do I use this? read: http://meyerweb.com/eric/tools/css/reset/ */
 html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,time,mark,audio,video { margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent; } 
@@ -16,13 +23,14 @@ ins { text-decoration:none; }
 del { text-decoration:line-through; }
 table { border-collapse:collapse;border-spacing:0; }
 
+/* HTML5 ELEMENT DECLARATIONS */
+section, article, header, footer, nav, aside, hgroup { display: block; }
 
 /* BASE STYLES */
 
 body {
 	font-family: 'Lato', sans-serif;
 }
-
 
 .page {
 	max-width: 37.5em; /* 800/16 = 37.5 */
@@ -32,112 +40,134 @@ body {
 }
 
 
-/* SITE MASTHEAD + NAV STYLES */
+/* SITE MASTHEAD STYLES */
 
 .masthead{
 	padding: 3em;
 }
 
-h1.masthead-name a{
+.masthead-header h1 a{
 	text-decoration: none;
 	color: #232a2e;
 	font-size: 1.5em; /* 24/16 = 1.5 */
 }
 
-h1.masthead-name a:hover{
+.masthead-header h1 a:hover{
 	color: #168eea;
 }
 
-.masthead-social{
+.masthead-footer{
 	padding: 1em;
 }
 
-.masthead-social li{
+.masthead-footer ul li{
 	float: left;
 	width: 33.333333333%;
 }
 
-.social-link{
+.masthead-footer ul li a{
 	text-decoration: none;
 	color: #44525a;
 }
 
-.masthead-social a:hover{
+.masthead-footer ul li a:hover{
 	color: #168eea;
 }
 
 
 /* SITE FOOTER STYLES */
 
-footer.page p{
-	color: #abb4b9
+.site-footer p{
+	color: #abb4b9;
+	margin-top: 2em;
+	margin-bottom: 2em;
 }
 
 
 /* Home Page Article List styles */
 
-.article-list-item{
+.article-list{
+	text-align: left;
+}
+
+.article-list ol li{
 	padding: 2em;
 }
 
-.article-list li a{
-	text-decoration: none;
-	color: #232a2e;
+.article-list-entry{
+	line-height: 2em;
 }
 
-.article-list h3{
-	text-align: left;
+.article-list-entry-footer{
+	padding-bottom: .25em;
+}
+
+.article-list-entry-footer p a{
+	color: #abb4b9;
+	text-decoration: none;
+}
+
+.article-list-entry-header{
+	padding-bottom: 1em;
+}
+
+.article-list-entry-header h2{
 	font-size: 2em;
 }
 
-.article-list li div{
+.article-list-entry-header h2 a{
 	color: #232a2e;
+	text-decoration: none;
 }
 
-h2.article-list-published-date{
-	text-align: left;
+.article-list-entry-header h2 a:hover{
+	color: #168eea;
 }
 
-h2.article-list-published-date a{
-	color: #abb4b9;
-}
-
-.article-list-summary{
-	text-align: left;
+.article-list-entry-summary p{
 	font-size: 1.125em;
 }
 
-.article-list-summary a{
+.article-list-entry-summary a{
 	color: #232a2e;
+	text-decoration: none;
 }
 
+.article-list-entry-summary{
+	padding-bottom: 1em;
+}
 
-h3.article-list-title a:hover{
+.article-list-entry-readmore a{
 	color: #168eea;
+	text-decoration: none;
 }
 
 
 
 /* ARTICLE STYLES */
 
-h2.article-published-date{
+.article-published-date{
 	text-align: center;
 	color: #abb4b9;
 }
 
-.article-content{
+.article img{
+	max-width: 100%;
+}
+
+.article{
 	display: inline-block;
 	width: 85%; /* results in ~60-70 characters per line */
 	text-align: left;
 	line-height: 1.75;
 }
 
-.article-content h3 {
+.article h2 {
 	text-align: center;
 	font-size: 2em; /* 32/16 = 2 */
 }
 
-.article-content h3 a{
+.article h2 a{
 	text-align: center;
 	text-decoration: none;
 	color: #232a2e;
@@ -170,13 +200,17 @@ h2.article-published-date{
 
 /* MEDIA QUERIED STYLES */
 
+/* HI RES STYLES */
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi){
+
+
+}
+
 @media all and (max-width: 37.5em) {
 
 	.article-content{
 		width: 90%;
 	}
-
-	/* MEDIA QUERIED STYLES */
 
 @media all and (max-width: 37.5em) {
 
