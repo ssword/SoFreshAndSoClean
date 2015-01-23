@@ -1,0 +1,16 @@
+{% block content %}
+<div class="article" role="article">
+
+	<div class="article-header" role="heading">
+        <header>
+        	<h2>{{ (pages|aboutpagefilter).title }}</h2>
+        </header>
+    </div>
+
+    <div class="article-body">
+    	{{ (pages|aboutpagefilter).content }}
+    </div>
+
+</div>
+{% endblock %}
+

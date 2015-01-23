@@ -13,7 +13,26 @@
     <meta name="tags" contents="{{tag}}" />
   {% endfor %}
 
-{% endblock %}
+{% endblock head %}
+
+{% block header %}
+        <div class="masthead" role="banner">
+            <div class="masthead-header">
+                <header>
+                    <h1 role="heading"><a href="{{ SITEURL }}/" role="link">{{ SITENAME }}</a></h1>
+                </header>
+            </div>
+            <div class="masthead-footer" role="contentinfo">
+                <footer>
+                    <ul>
+                        <li><a href="https://twitter.com/{{ TWITTER_USERNAME }}" role="link"><i class="fa fa-twitter"> Twitter </i></a></li>
+                        <li><a href="https://instagram.com/{{ INSTAGRAM_USERNAME }}" role="link"><i class="fa fa-instagram"> Instagram </i></a></li>
+                        <li><a href="{{ GITHUB_URL }}"><i class="fa fa-github-alt" role="link"> GitHub </i></a></li>
+                    </ul>
+                </footer>
+            </div>
+        </div>
+{% endblock header%}
 
 {% block content %}
 <!-- Begin article. Wrapping HTML5 elements in a div and then styling the div in order to avoid javascript workarounds for older browsers -->
@@ -37,4 +56,4 @@
     </article>
   </div>
 <!-- end article -->
-{% endblock %}
+{% endblock content %}

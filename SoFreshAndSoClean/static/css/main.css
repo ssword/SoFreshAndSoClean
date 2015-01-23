@@ -1,7 +1,7 @@
 /*
 
 mamcmanus.com
-© 2014 Matt McManus
+© 2015 Matt McManus
 
 */
 
@@ -39,6 +39,48 @@ body {
 	line-height: 1.5;
 }
 
+
+/* SITE NAV BASE STYLES */
+
+.site-header{
+	padding-top: 2em;
+}
+
+.nav ul{
+    list-style-type: none;
+    text-align: center;
+}
+
+.nav li a {
+    display: block;
+    text-decoration: none;
+}
+
+a#home-link{
+	color: #232a2e;
+	font-size: 2em; /* 32/16 = 2 */
+	font-weight: 900;
+	padding-bottom: 1em;
+}
+
+a#home-link:hover{
+	color: #168eea;
+}
+
+a.other-link {
+	color: #232a2e;
+	font-size: 1.25em;
+	font-weight: 100;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	border-top: 1px solid #abb4b9;
+	margin-left: 5em;
+	margin-right: 5em;
+}
+
+a.other-link:hover{
+	color: #168eea;
+}
 
 /* SITE MASTHEAD STYLES */
 
@@ -83,6 +125,26 @@ body {
 	margin-bottom: 2em;
 }
 
+.site-footer ul{
+	margin: 2em auto;
+	padding-bottom: 3em;
+	padding-top: 3em;
+}
+
+.site-footer ul li{
+	float: left;
+	width: 33.333333333%;
+}
+
+.site-footer ul li a{
+	text-decoration: none;
+	color: #abb4b9;
+}
+
+.site-footer ul li a:hover{
+	color: #168eea;
+}
+
 
 /* Home Page Article List styles */
 
@@ -91,7 +153,10 @@ body {
 }
 
 .article-list ol li{
-	padding: 2em;
+	padding-left: 2em;
+	padding-right: 2em;
+	padding-bottom: 4em;
+	padding-top: 1em;
 }
 
 .article-list-entry{
@@ -160,11 +225,13 @@ body {
 	width: 85%; /* results in ~60-70 characters per line */
 	text-align: left;
 	line-height: 1.75;
+	padding-top: 2em;
 }
 
 .article h2 {
 	text-align: center;
 	font-size: 2em; /* 32/16 = 2 */
+	font-weight: 900;
 }
 
 .article h2 a{
@@ -175,6 +242,7 @@ body {
 
 .article-body{
 	font-size: 1.125em; /* 18/16 = 1.125 */
+	font-weight: 300;
 }
 
 .article-body p{
@@ -196,9 +264,87 @@ body {
 	padding-bottom: 2.5em;
 }
 
+/* FONT ICON CSS */
+
+/* PROJECT HUB STYLES */
+
+.project-hub{
+	text-align: left;
+	margin-top: 1em;
+	padding-left: 2em;
+}
+
+p#project-intro{
+	padding-bottom: 2em;
+}
+
+.project-hub a {
+  color: gray;
+  text-decoration: none; 
+}
+
+.project-hub a:hover, a:focus {
+  color: #168eea;
+}
+
+
+/* Timeline Container */
+ol.timeline {
+	border-left: 5px solid #dddddd;
+	padding-bottom: 3em;
+	position: relative; 
+}
+
+.tl-content{
+	font-size: 1.25em; /* 20/16 = 1.25 */
+}
+
+.timeline:before {
+	content: "";
+    position: absolute;
+    bottom: 0;
+    left: -1.47em;
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    background: #dddddd;
+    border: 5px solid #dddddd; }
+
+/* Individual Timeline Item */
+.tl-node {
+	padding-left: 1.5em;
+	margin-bottom: 3em;
+	position: relative; 
+}
+
+.tl-node a {
+	display: block; 
+}
+
+.tl-node:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -0.95em;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    background: #fff;
+    border: 5px solid #dddddd; 
+}
+
+.tl-stamp {
+	color: #abb4b9;
+	font-size: .875em; /* 14/16 = .875 */
+}
+
+/************END PROJECT HUB**************/
+
 
 
 /* MEDIA QUERIED STYLES */
+
+
 
 /* HI RES STYLES */
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi){
@@ -206,27 +352,48 @@ body {
 
 }
 
-@media all and (max-width: 37.5em) {
-
-	.article-content{
-		width: 90%;
+@media all and (min-width: 37.5em){
+	.nav ul{
+		text-align: left;
+		padding-bottom: 1em;
+		border-bottom: 1px solid #abb4b9;
 	}
 
-@media all and (max-width: 37.5em) {
-
-	.article-content{
-		width: 90%;
+	.nav li{
+		display: inline-block;
 	}
 
-	.masthead-social li{
-		width: 100%;
-		padding: 1em;
+	a#home-link{
+		color: #232a2e;
+		font-size: 2em; /* 32/16 = 2 */
+		font-weight: 900;
+		padding-bottom: 0;
+		padding-left: .5em;
+		padding-right: 2em;
+	}
+
+	a.other-link {
+		color: #232a2e;
+		font-size: 1.25em;
+		font-weight: 100;
+		padding-top: 0;
+		padding-bottom: 0;
+		padding-right: 2em;
+		padding-left: 2em;
+		border-top: 0;
+		margin-left: 0;
+		margin-right: 0;
 	}
 
 	.article-list{
-		margin-top: 2em;
+		padding: 2em;
+	}
+
+	.site-footer ul{
+	width: 40%; /* looked good */
 	}
 
 }
+
 
 }

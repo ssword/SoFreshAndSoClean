@@ -1,0 +1,16 @@
+{% block content %}
+	<div class="project-hub">
+
+		<p id="project-intro"> Hi! I have not built out the pages for all of my other projects yet. Please check back soon. However, this website is a project itself...so in the meantime you can check out its project timeline below.</p>
+
+			<ol class="timeline">
+				{% for update in articles|projecthubfilter %}
+					<li class="tl-node">
+						<div class="tl-stamp">{{ update.date|datetimefilter }}</div>
+						<div class="tl-content">{{ update.title }}</div>
+						{{ update.content }}
+					</li>
+				{% endfor %}
+			</ol>
+	</div>
+{% endblock %}
