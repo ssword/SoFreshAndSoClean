@@ -26,6 +26,40 @@ table { border-collapse:collapse;border-spacing:0; }
 /* HTML5 ELEMENT DECLARATIONS */
 section, article, header, footer, nav, aside, hgroup { display: block; }
 
+/* FONT ICONS */
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.footer-icon{
+	font-size: 2em;
+}
+
+.icon-instagram:before {
+	content: "\ea90";
+}
+
+.icon-twitter:before {
+	content: "\ea91";
+}
+
+.icon-github4:before {
+	content: "\eab4";
+}
+
+
+
 /* BASE STYLES */
 
 body {
