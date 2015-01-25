@@ -266,10 +266,10 @@ a.other-link:hover{
 	text-align: center;
 	font-size: 2em; /* 32/16 = 2 */
 	font-weight: 900;
+	padding-bottom: 1em;
 }
 
 .article h2 a{
-	text-align: center;
 	text-decoration: none;
 	color: #232a2e;
 }
@@ -280,7 +280,7 @@ a.other-link:hover{
 }
 
 .article-body p{
-	padding-bottom: 2.5em;
+	padding-bottom: .75em;
 }
 
 .article-body h3{
@@ -288,6 +288,7 @@ a.other-link:hover{
 	font-weight: 700;
 	text-align: left;
 	padding-bottom: .5em;
+	padding-top: 1.5em;
 }
 
 .article-body ul{
@@ -297,6 +298,32 @@ a.other-link:hover{
 	line-height: 2;
 	padding-bottom: 2.5em;
 }
+
+.article-body a{
+	color: #232a2e;
+}
+
+.article-body a:hover{
+	color: #168eea;
+}
+
+/*****CODE BLOCK STYLES*****/
+
+.highlight pre{
+	display: block;
+	background-color: #f5f5f5;
+	border: 1px solid rgba(0, 0, 0, 0.15);
+	border-radius: .25em;
+	padding: .5em;
+	word-wrap: break-word;
+}
+
+span.nv{
+	color: #c65d09;
+	font-weight: 900;
+}
+
+/*****END CODE BLOCK STYLES*****/
 
 /* FONT ICON CSS */
 
