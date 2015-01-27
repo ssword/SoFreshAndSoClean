@@ -1,19 +1,21 @@
-/*
+/************************
 
 mamcmanus.com
 © 2015 Matt McManus
 
-*/
+************************/
 
-/* VIEWPORT SETTINGS */
+/********VIEWPORT SETTINGS********/
 @-webkit-viewport{width:device-width}
 @-moz-viewport{width:device-width}
 @-ms-viewport{width:device-width}
 @-o-viewport{width:device-width}
 @viewport{width:device-width}
+/********END VIEWPORT SETTINGS********/
 
+/********RESET STYLES********/
 /* html5doctor.com/html-5-reset-stylesheet/ */
-/* Why do I use this? read: http://meyerweb.com/eric/tools/css/reset/ */
+/* http://meyerweb.com/eric/tools/css/reset/ */
 html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,time,mark,audio,video { margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent; } 
 body { line-height:1; }
 ol,ul { list-style:none; }
@@ -22,46 +24,13 @@ blockquote:before,blockquote:after,q:before,q:after { content:'';content:none; }
 ins { text-decoration:none; }
 del { text-decoration:line-through; }
 table { border-collapse:collapse;border-spacing:0; }
+/********END RESET STYLES********/
 
-/* HTML5 ELEMENT DECLARATIONS */
+/********HTML5 ELEMENT DECLARATIONS********/
 section, article, header, footer, nav, aside, hgroup { display: block; }
+/********END HTML5 ELEMENT DECLARATIONS********/
 
-/* FONT ICONS */
-
-[class^="icon-"], [class*=" icon-"] {
-	font-family: 'icomoon';
-	speak: none;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
-
-	/* Better Font Rendering =========== */
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
-
-.footer-icon{
-	font-size: 2em;
-}
-
-.icon-instagram:before {
-	content: "\ea90";
-}
-
-.icon-twitter:before {
-	content: "\ea91";
-}
-
-.icon-github4:before {
-	content: "\eab4";
-}
-
-
-
-/* BASE STYLES */
-
+/********BASE STYLES********/
 body {
 	font-family: 'Lato', sans-serif;
 }
@@ -72,10 +41,9 @@ body {
 	text-align: center;
 	line-height: 1.5;
 }
+/********END BASE STYLES********/
 
-
-/* SITE NAV BASE STYLES */
-
+/********SITE NAV STYLES********/
 .site-header{
 	padding-top: 2em;
 }
@@ -115,9 +83,9 @@ a.other-link {
 a.other-link:hover{
 	color: #168eea;
 }
+/********END SITE NAV STYLES********/
 
-/* SITE MASTHEAD STYLES */
-
+/********SITE MASTHEAD STYLES********/
 .masthead{
 	padding: 3em;
 }
@@ -149,10 +117,9 @@ a.other-link:hover{
 .masthead-footer ul li a:hover{
 	color: #168eea;
 }
+/********END SITE MASTHEAD STYLES********/
 
-
-/* SITE FOOTER STYLES */
-
+/********SITE FOOTER STYLES ********/
 .site-footer p{
 	color: #abb4b9;
 	margin-top: 2em;
@@ -179,16 +146,21 @@ a.other-link:hover{
 	color: #168eea;
 }
 
+.site-footer-icon svg path{
+    fill: #abb4b9;
+}
+
+.site-footer-icon svg path:hover{
+	fill: #168eea;
+}
+/********END SITE FOOTER STYLES********/
 
 /* Home Page Article List styles */
-
 .article-list{
 	text-align: left;
 }
 
 .article-list ol li{
-	padding-left: 2em;
-	padding-right: 2em;
 	padding-bottom: 4em;
 	padding-top: 1em;
 }
@@ -243,8 +215,7 @@ a.other-link:hover{
 
 
 
-/* ARTICLE STYLES */
-
+/********ARTICLE STYLES********/
 .article-published-date{
 	text-align: center;
 	color: #abb4b9;
@@ -254,6 +225,7 @@ a.other-link:hover{
 	max-width: 100%;
 }
 
+/*Article Base*/
 .article{
 	display: inline-block;
 	width: 85%; /* results in ~60-70 characters per line */
@@ -262,6 +234,17 @@ a.other-link:hover{
 	padding-top: 2em;
 }
 
+.article-body{
+	font-size: 1.125em; /* 18/16 = 1.125 */
+	font-weight: 300;
+}
+
+.article-body p{
+	padding-bottom: .75em;
+}
+/*End Article Base*/
+
+/*Headers*/
 .article h2 {
 	text-align: center;
 	font-size: 2em; /* 32/16 = 2 */
@@ -274,31 +257,36 @@ a.other-link:hover{
 	color: #232a2e;
 }
 
-.article-body{
-	font-size: 1.125em; /* 18/16 = 1.125 */
-	font-weight: 300;
-}
-
-.article-body p{
-	padding-bottom: .75em;
-}
-
 .article-body h3{
 	font-size: 1.2em;
-	font-weight: 700;
-	text-align: left;
-	padding-bottom: .5em;
+	padding-bottom: .75em;
 	padding-top: 1.5em;
 }
 
-.article-body ul{
-	list-style-type: square;
+.article-body h4{
+	font-size: 1em;
+	padding-bottom: .25em;
+}
+/*End Headers*/
+
+/*Lists*/
+.article-body ul, ol{
 	width: 85%;
 	margin: 0 auto;
 	line-height: 2;
 	padding-bottom: 2.5em;
 }
 
+.article-body ul{
+	list-style-type: square;
+}
+
+.article-body ol{
+	list-style-type: decimal;
+}
+/*End Lists*/
+
+/*Body Links*/
 .article-body a{
 	color: #232a2e;
 }
@@ -306,8 +294,12 @@ a.other-link:hover{
 .article-body a:hover{
 	color: #168eea;
 }
+/*End Body Links*/
 
-/*****CODE BLOCK STYLES*****/
+/*Code Block*/
+.highlight{
+	padding-bottom: 1em;
+}
 
 .highlight pre{
 	display: block;
@@ -323,12 +315,33 @@ span.nv{
 	font-weight: 900;
 }
 
-/*****END CODE BLOCK STYLES*****/
+span.article-masthead-icon{
+	display: none;
+}
+/*End Code Block*/
 
-/* FONT ICON CSS */
+/*Article Footer*/
+.article-footer-icon svg path{
+    fill: #232a2e;
+}
 
-/* PROJECT HUB STYLES */
+.article-footer-icon svg path:hover{
+	fill: #168eea;
+}
 
+.article-footer-icon svg{
+    width: 1.5em;
+    height: 1.5em;
+}
+
+.article-footer-icon{
+	display: inline;
+}
+/*End Article Footer*/
+/********END ARTICLE STYLES********/
+
+
+/********PROJECT HUB STYLES********/
 .project-hub{
 	text-align: left;
 	margin-top: 1em;
@@ -398,13 +411,7 @@ ol.timeline {
 	color: #abb4b9;
 	font-size: .875em; /* 14/16 = .875 */
 }
-
-/************END PROJECT HUB**************/
-
-
-
-/* MEDIA QUERIED STYLES */
-
+/************END PROJECT HUB STYLES**************/
 
 
 /* HI RES STYLES */
@@ -413,6 +420,7 @@ ol.timeline {
 
 }
 
+/********FIRST BREAKPOINT STYLES********/
 @media all and (min-width: 37.5em){
 	.nav ul{
 		text-align: left;
@@ -451,10 +459,13 @@ ol.timeline {
 	}
 
 	.site-footer ul{
-	width: 40%; /* looked good */
+		max-width: 40%; /* looked good */
 	}
 
+	span.article-masthead-icon{
+		display: inherit;
+		vertical-align: super;
+		padding-left: .75em;
+	}
 }
-
-
-}
+/********END FIRST BREAKPOINT STYLES********/
