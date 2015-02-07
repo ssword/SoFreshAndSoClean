@@ -172,20 +172,21 @@ grunticon(["{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/icons.data.svg.css", "{{ SI
 
 <body>
     <div class="page" role="main">
-    {% block header %}
-            <div class="site-header" role="banner">
-                <header>
-                    <div class="nav">
-                        <nav>
-                            <ul>
-                                <li><a href="{{ SITEURL }}/" role="link" id="home-link">{{ SITENAME }}</a></li>
-                                <li><a href="/pages/about.html" role="link" class="other-link">About</a></li>
-                                <li><a href="/category/project-hub.html" role="link" class="other-link">Projects</a></li>
-                            </ul>
-                        </nav>
-                </header>
-            </div>
-    {% endblock header %}
+        {% block header %}
+        <div class="site-header" role="banner">
+            <header>
+                <div class="nav">
+                    <nav>
+                        <ul>
+                            <li><a href="{{ SITEURL }}/" role="link" id="home-link">{{ SITENAME }}</a></li>
+                            <li><a href="/pages/about.html" role="link" class="other-link">About</a></li>
+                            <li><a href="/category/project-hub.html" role="link" class="other-link">Projects</a></li>
+                        </ul>
+                    </nav>
+            </header>
+        </div>
+        {% endblock header %}
+
         {% block content %}
         {% endblock content %}
         <div class="site-footer" role="contentinfo">

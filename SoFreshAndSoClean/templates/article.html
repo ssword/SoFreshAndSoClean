@@ -16,7 +16,7 @@
 {% endblock head %}
 
 {% block header %}
-        <div class="masthead" role="banner">
+        <div class="masthead" id="masthead" role="banner">
             <div class="masthead-header">
                 <header>
                     <h1 role="heading"><a href="{{ SITEURL }}/" role="link">{{ SITENAME }}</a></h1>
@@ -56,4 +56,7 @@
     </article>
   </div>
 <!-- end article -->
+  <div class="back-to-top">
+      <a href="#masthead">Back to top</a>
+  </div>
 {% endblock content %}
